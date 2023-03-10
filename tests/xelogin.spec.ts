@@ -7,21 +7,20 @@ const USER_PASSWORD = constants.USER.XE.xeIdPassword;
 
 test.beforeEach(async ({ page }) => {
     // Load XE URL in to the new browser context
-    await page.goto(constants.URL.XE.xeLoginPage!, {
-        waitUntil: 'networkidle',
-    });
+    await page.goto(constants.URL.XE.xeLoginPage!, { waitUntil: 'networkidle' });
 });
 
 test('Login Page', async ({ page }) => {
-    const xeLoginPage = new pages.LoginPage(page);
+    const LoginPage = new pages.LoginPage(page);
 
-    await xeLoginPage.verifyEmailField();
+    await LoginPage.verifyEmailField();
 });
 
 test('Registered User login', async ({ page }) => {
-    const xeLoginPage = new pages.LoginPage(page);
+    const LoginPage = new pages.LoginPage(page);
 
-    await xeLoginPage.emailInput('test@test.com');
-    await xeLoginPage.passwordInput('password');
-    await xeLoginPage.clickLoginButton();
+    await LoginPage.loginButtonDisbaled();
+    await LoginPage.emailInput(USER_EMAIL);
+    await LoginPage.passwordInput(USER_PASSWORD);
+    await LoginPage.clickLoginButton();
 });

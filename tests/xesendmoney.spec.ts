@@ -9,9 +9,14 @@ test.beforeEach(async ({ page }) => {
 
 test('Send Money Page', async ({ page }) => {
     const SendMoneyPage = new pages.SendMoneyPage(page);
+
+    await SendMoneyPage.verifySignInAndSendButton();
+});
+
+test('navigate to the registration page', async ({ page }) => {
+    const SendMoneyPage = new pages.SendMoneyPage(page);
     const RegistrationPage = new pages.RegistrationPage(page);
 
     await SendMoneyPage.clickSignInAndSendButton();
-    await RegistrationPage.emailInput('Test@test.com');
-    await RegistrationPage.passwordInput('Testing123!');
+    await RegistrationPage.verifyEmailField();
 });

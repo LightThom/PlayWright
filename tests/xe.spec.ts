@@ -8,22 +8,22 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('Landing Page', async ({ page }) => {
-    const xeHomePage = new pages.HomePage(page);
+    const HomePage = new pages.HomePage(page);
 
-    await xeHomePage.convertButtonIsVisible();
+    await HomePage.convertButtonIsVisible();
 });
 
 test('Click Sign In', async ({ page }) => {
-    const xeHomePage = new pages.HomePage(page);
+    const HomePage = new pages.HomePage(page);
 
-    await xeHomePage.clickSignInButton();
-    await xeHomePage.clickMoneyTransfer();
+    await HomePage.clickSignInButton();
+    await HomePage.clickMoneyTransfer();
     await expect(page).toHaveURL(constants.URL.XE.xeLoginPage);
 });
 
 test('Enter Amount', async ({ page }) => {
-    const xeHomePage = new pages.HomePage(page);
+    const HomePage = new pages.HomePage(page);
 
-    await xeHomePage.amountFieldInput('1000');
-    await xeHomePage.verifyAmountInput;
+    await HomePage.amountFieldInput('1000');
+    await HomePage.verifyAmountInput;
 });

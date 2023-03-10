@@ -3,7 +3,7 @@ export const USER = {
     // Game User Details
     XE: {
         //USER: EMAIL=xe@mailinator
-        xeIdUserName: `thomasawcottrell@outlook.com`,
+        xeIdUserName: `test@test.com`,
         xeIdPassword: `Test1234!`,
 
         //default User details
@@ -14,7 +14,7 @@ export const USER = {
         TestFirstAddressLine: 'XE',
         TestTown: 'Basingstoke',
         TestCounty: 'Hampshire',
-        TestPostcode: 'RG24 9FS',
+        TestPostcode: 'RG24 9PP',
         TestDay: 25,
         TestMonth: 8,
         TestYear: 1974,
@@ -27,6 +27,6 @@ export const USER = {
         TestFirstAddressLine: 'XE',
         TestTown: 'Windsor',
         TestCounty: 'Berkshire',
-        TestPostcode: 'RG24 9AR',
+        TestPostcode: 'RG24 9PP',
     },
 };

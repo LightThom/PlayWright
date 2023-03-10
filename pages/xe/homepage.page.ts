@@ -38,17 +38,21 @@ export class HomePage {
     }
 
     async selectAmountField() {
+        // clicks the amount field
         const amountField = this.amountField;
         await amountField.click();
     }
 
     async amountFieldInput(amountInput: string) {
         const amountField = this.amountField;
+        // clicks the amount field
         this.selectAmountField;
+        // enters a value into the amount field
         await amountField.fill(amountInput);
     }
 
     async verifyAmountInput() {
+        // checks the amout has a value
         await expect(this.amountField).toContainText('1000');
     }
 }

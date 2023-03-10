@@ -15,7 +15,13 @@ export class SendMoneyPage {
         await this.page.waitForURL(constants.URL.XE.xeSendMoneyPage);
     }
 
+    async verifySignInAndSendButton() {
+        // checks the sign In and Send button is present
+        await expect(this.signInAndSendButton).toBeVisible();
+    }
+
     async clickSignInAndSendButton() {
+        // clicks the sign and send button
         await this.signInAndSendButton.click();
     }
 }
