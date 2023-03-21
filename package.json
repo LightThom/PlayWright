@@ -22,6 +22,7 @@
     "@playwright/test": "^1.31.2"
   },
   "dependencies": {
+    "jsonata": "^2.0.2",
     "prettier": "^2.8.4"
   }
 }
